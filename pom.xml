@@ -49,6 +49,45 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-		</plugins>
+            <!-- To use the plugin goals in your POM or parent POM -->
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.2.1.Final</version>
+            </plugin>
+            <!-- deploy -->
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.2.Final</version>
+                <executions>
+                    <execution>
+                        <id>deploy</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                        <configuration>
+                            <hostname>wildfly</hostname>
+                            <port>9990</port>
+                            <name>myapp</name>
+                            <username>admin</username>
+                            <password>password</password>
+                            <filename>myapp</filename>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+            <!-- To define the plugin version in your parent POM -->
+            <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.wildfly.plugins</groupId>
+                    <artifactId>wildfly-maven-plugin</artifactId>
+                    <version>1.2.1.Final</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
 	</build>
 </project>
