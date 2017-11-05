@@ -9,6 +9,7 @@ import javax.persistence.Id;
  * @author konishiyuji
  */
 @Entity
+@Table(name = "PERSON")
 public class Person implements Serializable {
     @Id
     private int id;
