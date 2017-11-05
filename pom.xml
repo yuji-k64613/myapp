@@ -70,10 +70,10 @@
                         <configuration>
                             <hostname>wildfly</hostname>
                             <port>9990</port>
-                            <name>myapp</name>
+                            <name>myapp.war</name>
                             <username>admin</username>
                             <password>password</password>
-                            <filename>myapp</filename>
+                            <filename>myapp.war</filename>
                         </configuration>
                     </execution>
                 </executions>
